@@ -12,6 +12,12 @@ poetry install --no-root
 ```
 
 ## Configuration:
-
+To use run the following command:
+```posh
+cd "Python Data Science"
+poetry shell
+poetry run python testScript.py
+exit
+```
 
 ## Troubleshooting:
