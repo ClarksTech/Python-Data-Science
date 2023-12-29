@@ -14,7 +14,7 @@ poetry install --no-root
 ## Configuration:
 To use run the following command:
 ```posh
-cd "Python Data Science"
+cd "Sorting Algorithms"
 poetry shell
 poetry run python testScript.py
 exit
