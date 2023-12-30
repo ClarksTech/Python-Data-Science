@@ -44,13 +44,42 @@ class SORT:
                 if not unordered:
                     return
 
-    def selectionSort(self):
-        """Performs selection sort on unsorted list.
-        """
+    def selectionSort(self, list: list):
+        """Performs selection sort in place on unsorted list.
 
-    def insertionSort(self):
-        """Performs insertion sort on unsorted list.
+        :param list: Initially an unsorted list
+        :return: No return as list is sorted in place meaning original list variable now holds the sorted list
+
+        :Space Complexity: O(1)
+        :Time Complexity: O(n^2)
         """
+        self.list = list
+        for el in range(len(self.list)):
+            minEl = el
+            for el_ in range(minEl+1, len(self.list)):
+                if self.list[el_] < self.list[minEl]:
+                    minEl = el_
+            self.list[el], self.list[minEl] = self.list[minEl], self.list[el]
+        return
+
+    def insertionSort(self, list: list):
+        """Performs insertion sort on unsorted list.
+
+        :param list: Initially an unsorted list
+        :return: No return as list is sorted in place meaning original list variable now holds the sorted list
+
+        :Space Complexity: O(1)
+        :Time Complexity: O(n^2)
+        """
+        self.list = list
+        for el in range(1, len(self.list)):
+            sortedEl = self.list[el]
+            el_ = el - 1
+            while self.list[el_] > sortedEl and el_ >= 0:
+                self.list[el_ + 1] = self.list[el_]
+                el_ -= 1
+            self.list[el_ + 1] = sortedEl
+        return    
 
     def shellSort(self):
         """Performs shell sort on unsorted list.
@@ -69,6 +98,6 @@ class SORT:
         """
 
     def countingSort(self):
-        """Performs bubble sort on unsorted list.
+        """Performs counting sort on unsorted list.
         """
 

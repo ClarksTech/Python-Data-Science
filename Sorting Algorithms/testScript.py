@@ -9,9 +9,9 @@ sort = SORT()
 sort.showList(testList)
 
 # Run bubble sort and display sorted list
-sort.bubbleSort(testList)
+sort.insertionSort(testList)
 sort.showList(testList)
 
-# Example of accessing Docstrings
-help(sort.bubbleSort)
+# Example of accessing Docstrings:
+# help(sort.bubbleSort)
 
